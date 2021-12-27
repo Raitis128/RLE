@@ -1,0 +1,3 @@
+﻿  RLE.cpp
+C:\Users\krist\source\repos\RLE\RLE\RLE.cpp(10,15): warning C4101: ch: неиспользованная локальная переменная
+  RLE.vcxproj -> C:\Users\krist\source\repos\RLE\x64\Debug\RLE.exe
