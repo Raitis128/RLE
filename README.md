@@ -1,0 +1,2 @@
+# RLE
+Run-length encoding
