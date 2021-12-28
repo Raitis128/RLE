@@ -29,7 +29,7 @@ void compress()
             {
                 fcom << key << freq << endl;
                 key = fin.get();
-                freq = 0;
+                freq = 1;
                 break;
             }
             else if (key == str[i])
@@ -65,7 +65,7 @@ void decompress()
 
     while (getline(fcom, str))
     {
-        for (int i = 0;i < str.length();i += 3)
+        for (int i = 0;i < str.length();i += 2)
             // reading two bits of the string in one iteration, so steps of 2
         {
             key = str[i];
@@ -96,15 +96,15 @@ int main()
     {
         system("cls");
 
-        cout << "******************************************************" << endl;
-        cout << "                 RUN-LENGTH ENCODING                  " << endl;
-        cout << "******************************************************" << endl;
-
-        cout << endl << endl;
-        cout << "     1. Compress a file " << endl;
-        cout << "     2. Decompress a file" << endl;
-        cout << "     3. Exit" << endl;
-        cout << "\nEnter your choice here : ";
+        cout << "\t\t\t\t _______________________________________________" << endl;
+        cout << "\t\t\t\t|                                               |" << endl;
+        cout << "\t\t\t\t|\t\tRUN-LENGTH ENCODING\t\t|" << endl;
+        cout << "\t\t\t\t|                                               |" << endl;
+        cout << "\t\t\t\t|\t\t1. Compress a file\t\t|" << endl;
+        cout << "\t\t\t\t|\t\t2. Decompress a file\t\t|" << endl;
+        cout << "\t\t\t\t|\t\t3. Exit\t\t\t\t|" << endl;
+        cout << "\t\t\t\t|_______________________________________________|" << endl;
+        cout << "\n\t\t\t\t\t     Enter your choice here : ";
         cin >> choice;
 
         switch (choice)
@@ -112,20 +112,21 @@ int main()
         // compress
         case 1:
             compress();
-            cout << "COMPRESSION SUCCESSFUL!" << endl;
+            cout << "\t\t\t\t\t     COMPRESSION SUCCESSFUL!" << endl;
             system("pause>null");
             break;
         // decompress
         case 2:
             decompress();
-            cout << "DECOMPRESSION SUCCESSFUL!" << endl;
+            cout << "\t\t\t\t\t     DECOMPRESSION SUCCESSFUL!" << endl;
             system("pause>null");
             break;
         //exit
         case 3:
             exit(0);
         default:
-            cout << "ERROR : Please enter a valid option!" << endl;
+            cout << "\t\t\t\t\t     ERROR!" << endl;
+            system("pause>null");
         }
     }
     return 0;
